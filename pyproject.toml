@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "cog-ingester"
+version = "0.1.0"
+description = ""
+authors = ["jthetzel <jthetzel@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+fastapi = {extras = ["all"], version = "^0.55.1"}
+python-language-server = {extras = ["all"], version = "^0.33.0"}
+pyls-mypy = "^0.1.8"
+rio_cogeo = "2.0a2"
+python-dotenv = "^0.13.0"
+smart_open = {extras = ["all"], version = "^2.0.0"}
+boto3 = "^1.13.20"
+httpx = "^0.13.3"
+asyncio = "^3.4.3"
+backoff = "^1.10.0"
+pystac = "^0.5.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+rio_cogeo = "^1.1.10"
+
+[tool.poetry.scripts]
+format = "scripts:format"
+start = "scripts:start"
+api = "scripts:api"
+test = "scripts:test"
+freeze = "scripts:freeze"
+docker = "scripts:docker"
+docker-build = "scripts:docker_build"
+docker-run = "scripts:docker_run"
+docker-run-bash = "scripts:docker_run_bash"
+docker-push = "scripts:docker_push"
+deploy = "scripts:deploy"
+batch = "scripts:batch"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
